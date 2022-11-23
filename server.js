@@ -5,7 +5,7 @@ const app = express();
 const archivoDB = require ('./conexion.js')
 
 //importacion del archivo de rutas y modelos
-const rutaUsuario = require('./rutas/usuario')
+const rutaNota = require('./rutas/nota')
 
 //Importat body parser
 const bodyParser = require('body-parser')
@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: 'true'}))
 
 
-app.use('/api/usuario', rutaUsuario)
+app.use('/api/nota', rutaNota)
 
 app.get('/', (req,res) => {
     res.end('Hola mundo sean todos Bienvenidos')

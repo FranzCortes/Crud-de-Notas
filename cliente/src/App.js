@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-import ListaUsuario from './ListaUsuario';
-import AgregarUsuario from './AgregarUsuario';
-import EditarUsuario from './EditarUsuario';
+import ListaNota from './ListaNota';
+import AgregarNota from './AgregarNota';
+import EditarNota from './EditarNota';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
-            <a className="navbar-brand" href="/">Crud Registro de Usuarios</a>
+            <a className="navbar-brand" href="/">Crud de Notas</a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -23,7 +23,7 @@ function App() {
                   <a className="nav-link active" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="agregarusuario">Agregar Usuario</a>
+                  <a className="nav-link" href="agregarnota">Agregar Notas</a>
                 </li>
               </ul>
             </div>
@@ -32,9 +32,9 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ListaUsuario/>} exact></Route>
-        <Route path='/agregarusuario' element={<AgregarUsuario/>} exact></Route>
-        <Route path='/editarusuario/:idUsuario' element={<EditarUsuario/>} exact></Route>
+        <Route path='/' element={<ListaNota/>} exact></Route>
+        <Route path='/agregarnota' element={<AgregarNota/>} exact></Route>
+        <Route path='/editarnota/:idNota' element={<EditarNota/>} exact></Route>
       </Routes>
     </BrowserRouter>
 
