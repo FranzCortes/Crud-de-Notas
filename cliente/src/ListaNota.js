@@ -16,7 +16,7 @@ function ListaNotas(){
 
     }, [])
 
-    // Mapear lista de usuario en objeto usuario
+    // Mapear lista de notas en objeto nota
     const listaNota = dataNota.map(nota => {
         return(
             <div>

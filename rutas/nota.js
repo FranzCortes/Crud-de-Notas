@@ -19,7 +19,8 @@ module.exports = router
 //     res.end('Saludo Carga desde ruta test')
 // })
 
-//agregar usuarios
+
+//agregar notas
 router.post('/agregarnota',(req, res)=>{
     const nuevaNota = new ModeloNota({
         titulo: req.body.titulo,
@@ -37,7 +38,7 @@ router.post('/agregarnota',(req, res)=>{
 })
 
 
-//Obtener todos los usuarios
+//Obtener todos las notas
 router.get('/obtenerNota',(req, res) => {
     ModeloNota.find({}, function(docs, err){
         if(!err){
@@ -48,7 +49,7 @@ router.get('/obtenerNota',(req, res) => {
     })
 })
 
-//Obtener data usuario
+//Obtener data notas
 router.post('/obtenerDataNota',(req, res) => {
     ModeloNota.find({idNota:req.body.idNota}, function(docs, err){
         if(!err){
@@ -60,7 +61,7 @@ router.post('/obtenerDataNota',(req, res) => {
 })
 
 
-//Actualizar usuario
+//Actualizar nota
 router.post('/actualizarnota', (req, res)=>{
 
     ModeloNota.findOneAndUpdate({idNota:req.body.idNota},{
@@ -77,7 +78,7 @@ router.post('/actualizarnota', (req, res)=>{
 })
 
 
-//Eliminar usuario
+//Eliminar nota
 router.post('/borrarnota', (req, res)=>{
 
     ModeloNota.findOneAndDelete({idNota:req.body.idNota},(err) => {

@@ -28,7 +28,7 @@ function EditarNota(){
 
     //funcion que actualiza
     function editarNota(){
-        //Nuevo objeto para actualizar el usuario
+        //Nuevo objeto para actualizar nota
         const actualizarNota = {
             titulo:titulo,
             fecha:fecha,
@@ -40,7 +40,7 @@ function EditarNota(){
         axios.post('/api/nota/actualizarnota', actualizarNota)
         .then(res=>{
             Swal.fire( '',
-                'El usuario se edito con éxito',
+                'La nota se edito con éxito',
             'success')
             navegar('/')
         })

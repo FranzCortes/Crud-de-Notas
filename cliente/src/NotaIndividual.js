@@ -14,7 +14,7 @@ function NotaIndividual({nota}){
         AOS.init()
     }, [])
 
-    //funcion para borrar usuario
+    //funcion para borrar nota
     function borrarNota(idNota){
         axios.post('/api/nota/borrarnota', {idNota:idNota}).then(res => {
             console.log(res.data)
